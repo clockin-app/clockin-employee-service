@@ -1,0 +1,14 @@
+services:
+  mysql_employee:
+    image: mysql:8.0
+    container_name: mysql_employee
+    environment:
+      MYSQL_ROOT_PASSWORD: root1234
+      MYSQL_DATABASE: employee_db
+    ports:
+      - '3307:3306'
+    volumes:
+      - mysql_employee_data:/var/lib/mysql
+
+volumes:
+  mysql_employee_data:
